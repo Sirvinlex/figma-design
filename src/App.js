@@ -1,12 +1,13 @@
 import './App.css';
+import { useState } from 'react';
 import icon from './task-icon.png';
 
 
-function AssetButton({ spanText1, spanText2 }) {
+function Asset({ spanText1, spanText2, title }) {
 
   return (
-    <div className='btn-container'>
-      <div className='asset-btn'>
+      <>
+        <div className='asset-container'>
         <div className='image-div'>
           <div className='image-container'>
             <img className='icon-img' src={icon}  alt= 'Icons' />
@@ -27,16 +28,38 @@ function AssetButton({ spanText1, spanText2 }) {
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
+
+
 function App() {
+  const [showButton, setShowButton] = useState(true);
+
+  function showButtonComponent() {
+    setShowButton(true);
+    alert('Component was converted to a button. Click again to convert to div');
+  };
+
+  function hideButtonComponent() {
+    setShowButton(false);
+    alert('Component was converted to a div. Click again to convert to button');
+  };
   return (
-    <AssetButton 
-      spanText1='Single Asset'
-      spanText2='Fill-out our online form'
-    />
+    <>
+      {showButton ? <p className='title'>Asset Button</p> : <p className='title'>Asset Div</p>}
+      {showButton ? (
+        <button className='component-container' type='button'  onClick={hideButtonComponent}>
+         <Asset spanText1='Single Asset'spanText2='Fill-out our online form' />
+        </button>
+      ) : (
+        <div className=' component-container' onClick={showButtonComponent}>
+          <Asset spanText1='Single Asset'spanText2='Fill-out our online form' />
+        </div>
+      )}
+      
+    </>
   );
 }
 

@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700');
 
-.btn-container {
+.component-container{
+  background-color: inherit;
+  border: none;
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
 }
-.asset-btn {
+.title {
+  color: #ffffff;
+  margin-top: 124px;
+  margin-left: 20px;
+  text-align: center;
+}
+.asset-container {
   align-items: center;
   background-color: #ffffff;
   border: 1px solid #cccccc;
@@ -17,8 +25,9 @@
   width: 264px;
   border-radius: 4px;
   position: relative;
-  top: 124px;
+  margin-top: -15px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .image-container{
   height: 64px;
@@ -28,26 +37,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.image-div{
+  cursor: default;
   margin-top: 46px;
-}
-.image-div:hover{
-  border: solid 2px #4287f5;
 }
 .icon-img {
   height: 24px;
   width: 24px;
-}
-.icon-img:hover{
-  background-color: #4287f5;
-}
-.image-div:has(.icon-img:hover) {
-  border: none;
-}
-.container-center-horizontal > * {
-  flex-shrink: 0;
-  pointer-events: auto;
 }
 .headers-container {
   display: flex;
@@ -57,16 +52,10 @@
   height: 50px;
   width: 232px;
 }
-
 .header {
   width: 232px;
   height: 22px;
   text-align: center; 
-}
-span:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-decoration-color: #4287f5;
 }
 .span1{
   font-family: 'Noto Sans JP';
@@ -75,10 +64,6 @@ span:hover {
   font-size: 14px;
   line-height: 22px;
   color: #121212;
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
   cursor: default;
 }
 .subheader {
