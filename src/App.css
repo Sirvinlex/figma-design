@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.asset-btn {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
   display: flex;
   flex-direction: column;
+  gap: 24px;
+  height: 248px;
+  width: 264px;
+  border-radius: 4px;
+  position: relative;
+  top: 124px;
+  box-sizing: border-box;
+}
+.image-container{
+  height: 64px;
+  width: 64px;
+  border-radius: 100px;
+  background: #F4FAFA;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.image-div{
+  margin-top: 46px;
+}
+.image-div:hover{
+  border: solid 2px #4287f5;
+}
+.icon-img {
+  height: 24px;
+  width: 24px;
+}
+.icon-img:hover{
+  background-color: #4287f5;
+}
+.image-div:has(.icon-img:hover) {
+  border: none;
+}
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+.headers-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  height: 50px;
+  width: 232px;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  width: 232px;
+  height: 22px;
+  text-align: center; 
+}
+span:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #4287f5;
+}
+.span1{
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  color: #121212;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  cursor: default;
+}
+.subheader {
+  text-align: center;
+  width: 232px;
+  height: 20px;
+}
+.span2{
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #76757B;
+  cursor: default;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
